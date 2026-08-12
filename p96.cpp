@@ -2,8 +2,8 @@
 
 using namespace std;
 
-const long long max = 10000000;
-long long c[max + 5];
+const long long m = 10000000;
+long long c[m + 5];
 
 int main() {
     long long n;
