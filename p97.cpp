@@ -1,21 +1,20 @@
 #include <bits/stdc++.h>
 #include <vector>
+#include <algorithm>
+
 using namespace std;
 
 int main() {
-    long long y, t, x, total;
-    cin >> y;
-    vector<int> differ;
-    long long n[y];
-    t = 0;
-    for(int i = 0; i < y; i++){
-        cin >> x;
-        n[i] = x;
+    int y;
+    if (!(cin >> y)) return 0;
+    vector<long long> n(y);
+
+    for (int i = 0; i < y; i++) {
+        cin >> n[i];
     }
-    for (int temp = 0; temp < y; temp++) {
-        int c = count(differ.begin(), differ.end(), n[temp]);
-        if (c == 0) differ.push_back(n[temp]);
-    }
-    cout << differ.size();
+
+    sort(n.begin(), n.end());
+    int kb = unique(n.begin(), n.end()) - n.begin();
+    cout << kb << "\n";
     return 0;
 }

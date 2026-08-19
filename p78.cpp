@@ -6,9 +6,11 @@ int main() {
     cin >> a >> b >> n;
 
     a %= b;
+    n--;
 
-    while (--n) {
+    while (n) {
         a = (a * 10) % b;
+        n--;
     }
 
     cout << (a * 10) / b;
