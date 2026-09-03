@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    int n;
+    int n, t = 0;
     if (!(cin >> n)) return 0;
     vector<long long> a(n);
     long long min_val = 9999999999999;
@@ -15,10 +15,12 @@ int main() {
             min_val = a[i];
         }
     }
+    cout << min_val << " ";
     for (int i = 0; i < n; i++) {
         if (a[i] == min_val) {
-            cout << i + 1 << " ";
+            t++;
         }
     }
+    cout << t;
     return 0;
 }
